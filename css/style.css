@@ -1175,7 +1175,7 @@ li {
 .request-container>.endpoint-info {
     display: flex;
     background-color: var(--color-background-light);
-    width: 650px;
+    width: calc(100% - 10vw);
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 4px;
@@ -1221,7 +1221,7 @@ details>summary {
 
 .codeblock-multiline {
     display: inline-block;
-    width: 650px
+    width: calc(100% - 10vw);
 }
 
 .response-objectitems {
