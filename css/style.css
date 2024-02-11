@@ -1253,7 +1253,7 @@ details>summary {
     min-width: 35px;
     max-width: 50px;
     outline: solid 1px var(--secondary);
-    padding: 5px;
+    padding: 3px;
     text-align: center;
     border-radius: 2px;
     cursor: pointer;
