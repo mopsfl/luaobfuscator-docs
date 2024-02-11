@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=VT323&display=swap" rel="stylesheet">
+    <script src="/js/docs.js"></script>
 </head>
 
 <body>
@@ -98,7 +99,8 @@
                                                     <div class="request-container">
                                                         <div class="endpoint-info">
                                                             <div class="method">POST</div>
-                                                            <div class="endpoint">http://luaobfuscator.com/api/obfuscator/newscript</div>
+                                                            <div class="endpoint">https://luaobfuscator.com/api/obfuscator/newscript</div>
+                                                            <div class="copy copy-endpoint" data-copyclass=".endpoint">Copy</div>
                                                         </div>
                                                         <div class="desc">
                                                             <p>This endpoint initiates a new obfuscation session for a Lua script, wich will return the created sessionId. Your script is placed in the requests body.</p>
@@ -139,7 +141,8 @@
                                                     <div class="request-container">
                                                         <div class="endpoint-info">
                                                             <div class="method">POST</div>
-                                                            <div class="endpoint">http://luaobfuscator.com/api/obfuscator/obfuscate</div>
+                                                            <div class="endpoint">https://luaobfuscator.com/api/obfuscator/obfuscate</div>
+                                                            <div class="copy copy-endpoint" data-copyclass=".endpoint">Copy</div>
                                                         </div>
                                                         <div class="desc">
                                                             <p>This endpoint is used to send obfuscation method requests to the Lua script using the provided sessionId.</p>
@@ -185,27 +188,33 @@
                                     <h3 id="examples">Examples</h3>
                                     <div class="examples-container">
                                         <ul class="ul-list">
-                                            <details>
+                                            <details open>
                                                 <summary>Creating a script / session</summary>
                                                 <ul>
                                                     <div class="request-container">
-                                                        <div>
+                                                        <div class="codeblock-container">
                                                             <h4 class="codeblock-header">Curl:</h4>
                                                             <code class="codeblock-multiline">
-                                                                <p>curl -X POST https://luaobfuscator.com/api/obfuscator/newscript \</p>
-                                                                <p style="margin-left:25px">-H "content-type: application/json" \</p>
-                                                                <p style="margin-left:25px">-H "apikey: test" \</p>
-                                                                <p style="margin-left:25px">-d 'print("test")'</p>
+                                                                <div class="copy copy-codeblock" data-copyclass=".endpoint">Copy</div>
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>curl -X POST https://luaobfuscator.com/api/obfuscator/newscript \</p>
+                                                                    <p style="margin-left:25px">-H "content-type: application/json" \</p>
+                                                                    <p style="margin-left:25px">-H "apikey: test" \</p>
+                                                                    <p style="margin-left:25px">-d 'print("test")'</p>
+                                                                </div>
                                                             </code>
                                                         </div>
                                                         <div>
                                                             <h4 class="codeblock-header">Example Response:</h4>
                                                             <code class="codeblock-multiline">
-                                                                <p>{</p>
-                                                                    <p style="margin-left:25px">"message": null</p>
-                                                                    <p style="margin-left:25px">"sessionId": "2v64HYPfQ89K24Db084hw3iBx...tz8PF6l20vzAQxL2G0bHJ6Zqz3j"</p>
-                                                                    <p style="margin-left:25px">"code": null</p>
-                                                                <p>}</p>
+                                                                <div class="copy copy-codeblock" data-copyclass=".endpoint">Copy</div>
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>{</p>
+                                                                        <p style="margin-left:25px">"message": null</p>
+                                                                        <p style="margin-left:25px">"sessionId": "2v64HYPfQ89K24Db084hw3iBx...tz8PF6l20vzAQxL2G0bHJ6Zqz3j"</p>
+                                                                        <p style="margin-left:25px">"code": null</p>
+                                                                    <p>}</p>
+                                                                </div>
                                                             </code>
                                                         </div>
                                                     </div>
@@ -218,21 +227,27 @@
                                                         <div>
                                                             <h4 class="codeblock-header">Curl:</h4>
                                                             <code class="codeblock-multiline">
-                                                                <p>curl -X POST https://luaobfuscator.com/api/obfuscator/obfuscate \</p>
-                                                                <p style="margin-left:25px">-H "content-type: application/json" \</p>
-                                                                <p style="margin-left:25px">-H "apikey: test" \</p>
-                                                                <p style="margin-left:25px">-H "sessionId: 2v64HYPfQ89K24Db084hw3iBx...tz8PF6l20vzAQxL2G0bHJ6Zqz3j" \</p>
-                                                                <p style="margin-left:25px">-d '{ "MinifiyAll": true, "Virtualize": true }'</p>
+                                                                <div class="copy copy-codeblock" data-copyclass=".endpoint">Copy</div>
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>curl -X POST https://luaobfuscator.com/api/obfuscator/obfuscate \</p>
+                                                                    <p style="margin-left:25px">-H "content-type: application/json" \</p>
+                                                                    <p style="margin-left:25px">-H "apikey: test" \</p>
+                                                                    <p style="margin-left:25px">-H "sessionId: 2v64HYPfQ89K24Db084hw3iBx...tz8PF6l20vzAQxL2G0bHJ6Zqz3j" \</p>
+                                                                    <p style="margin-left:25px">-d '{ "MinifiyAll": true, "Virtualize": true }'</p>
+                                                                </div>
                                                             </code>
                                                         </div>
                                                         <div>
                                                             <h4 class="codeblock-header">Example Response:</h4>
                                                             <code class="codeblock-multiline">
-                                                                <p>{</p>
-                                                                    <p style="margin-left:25px">"message": null</p>
-                                                                    <p style="margin-left:25px">"code": "local v0=string.char;local v1=string.byte;local v2=..."</p>
-                                                                    <p style="margin-left:25px">"sessionId": null</p>
-                                                                <p>}</p>
+                                                                <div class="copy copy-codeblock" data-copyclass=".endpoint">Copy</div>
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>{</p>
+                                                                        <p style="margin-left:25px">"message": null</p>
+                                                                        <p style="margin-left:25px">"code": "local v0=string.char;local v1=string.byte;local v2=..."</p>
+                                                                        <p style="margin-left:25px">"sessionId": null</p>
+                                                                    <p>}</p>
+                                                                </div>
                                                             </code>
                                                         </div>
                                                     </div>
