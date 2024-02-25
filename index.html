@@ -61,7 +61,6 @@
                             </div>
                         </div>
 
-
                         <div class="content-box content-box-interactable" style="margin-bottom: 30px;">
                             <div class="content-box-middle-TEST" style="color:var(--white); min-height: 400px; width: 100%; padding: 5px; box-sizing: border-box; ">
                                 <a style="text-decoration: none;" href="/forum/docs">
@@ -85,8 +84,8 @@
                                         <br>
                                         <p>By sending HTTP requests to designated endpoints, you can seamlessly integrate script obfuscation into their workflows.</p>
                                         <ul>
-                                            <li><code>/api/obfuscator/newscript</code> - uploads your scripts</li>
-                                            <li><code>/api/obfuscator/obfuscate</code> - obfuscates the uploaded script</li>
+                                            <li><code>/obfuscator/newscript</code> - uploads your scripts</li>
+                                            <li><code>/obfuscator/obfuscate</code> - obfuscates the uploaded script</li>
                                         </ul>
                                         <p>Responses typically include the obfuscated Lua script or relevant information such as the <b>sessionId</b>, used to apply obfuscation methods on your uploaded script.</p>
                                     </div>
@@ -101,7 +100,7 @@
                                                     <div class="request-container">
                                                         <div class="endpoint-info">
                                                             <div class="method">POST</div>
-                                                            <div class="endpoint">https://luaobfuscator.com/api/obfuscator/newscript</div>
+                                                            <div class="endpoint">https://api.luaobfuscator.com/v1/obfuscator/newscript</div>
                                                             <div class="copy copy-endpoint" data-copyclass=".endpoint">Copy</div>
                                                         </div>
                                                         <div class="desc">
@@ -143,7 +142,7 @@
                                                     <div class="request-container">
                                                         <div class="endpoint-info">
                                                             <div class="method">POST</div>
-                                                            <div class="endpoint">https://luaobfuscator.com/api/obfuscator/obfuscate</div>
+                                                            <div class="endpoint">https://api.luaobfuscator.com/v1//obfuscator/obfuscate</div>
                                                             <div class="copy copy-endpoint" data-copyclass=".endpoint">Copy</div>
                                                         </div>
                                                         <div class="desc">
@@ -199,7 +198,7 @@
                                                             <code class="codeblock-multiline">
                                                                 <div class="copy copy-codeblock" data-copyclass=".endpoint">Copy</div>
                                                                 <div class="codeblock-multiline-content">
-                                                                    <p>curl -X POST https://luaobfuscator.com/api/obfuscator/newscript \</p>
+                                                                    <p>curl -X POST https://api.luaobfuscator.com/v1//obfuscator/newscript \</p>
                                                                     <p style="margin-left:25px">-H "content-type: application/json" \</p>
                                                                     <p style="margin-left:25px">-H "apikey: test" \</p>
                                                                     <p style="margin-left:25px">-d 'print("test")'</p>
@@ -231,7 +230,7 @@
                                                             <code class="codeblock-multiline">
                                                                 <div class="copy copy-codeblock" data-copyclass=".endpoint">Copy</div>
                                                                 <div class="codeblock-multiline-content">
-                                                                    <p>curl -X POST https://luaobfuscator.com/api/obfuscator/obfuscate \</p>
+                                                                    <p>curl -X POST https://api.luaobfuscator.com/v1//obfuscator/obfuscate \</p>
                                                                     <p style="margin-left:25px">-H "content-type: application/json" \</p>
                                                                     <p style="margin-left:25px">-H "apikey: test" \</p>
                                                                     <p style="margin-left:25px">-H "sessionId: 2v64HYPfQ89K24Db084hw3iBx...tz8PF6l20vzAQxL2G0bHJ6Zqz3j" \</p>
@@ -264,12 +263,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
             <div class="notepad-toolbox" style="display: block; height:100%; min-width: 230px; background-color: #181818; overflow-y: auto;">
-
                 <a style="text-decoration: none;" href="/">
                     <div class="toolbox-collapsible collapsible-header">Home</div>
                 </a>
