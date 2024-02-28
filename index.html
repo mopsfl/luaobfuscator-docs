@@ -75,6 +75,7 @@
                                         <li><a href="#http-requests">HTTP Requests</a></li>
                                         <li><a href="#examples">Examples</a></li>
                                         <li><a href="#plugins">Plugins</a></li>
+                                        <li><a href="#extras">Extras</a></li>
                                     </ul>
                                     <h3 id="getting-started">Getting Started</h3>
                                     <p>
@@ -257,12 +258,449 @@
                                         </ul>
                                     </div>
                                     <h3 id="plugins">Plugins</h3>
-                                    <p>
-                                        TODO: The whole wash list of plugins and what they do.
-                                    </p>
+                                    <div class="examples-container">
+                                        <ul class="ul-list">
+											<details>
+                                                <summary>BasicIntegrity</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>EXPERIMENTAL</p>
+                                                                    <p>idk I forgot what this one did</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary style="color: var(--primary);">CachedEncryptStrings</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Encrypts all* the strings in the script and caches them in a table. Caching is done at startup.</p>
+                                                                    <p>*some strings with special characters might not be included</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>ControlFlowFlattenV1AllBlocks</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Version 1 Control Flow Obfuscation. Injects basic while loops with a state counter.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary style="color: var(--primary);">ControlFlowFlattenV2AllBlocks</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>EXPERIMENTAL</p>
+                                                                    <p>UNFINISHED</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>ConstMaker</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Used with macro <span>LPH_CONST()</span> to turn a variable into a constant.</p>
+																	<p>For example:</p>
+																	<pre>
+local x = LPH_CONST(123);
+print(x-1);
+																	</pre>
+																	<p>Will obfuscate into just "<code>print(123-1);</code>".
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>DisableLuraphMacros</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Will remove a bunch of LPH_* macro's to provide compatibility with certain scripts.</p>
+																	<p>This includes:</p>
+																	<ul>
+																		<li>LPH_ENCSTR</li>
+																		<li>LPH_ENCNUM</li>
+																		<li>LPH_JIT, LPH_JIT_MAX</li>
+																		<li>LPH_NO_VIRTUALIZE</li>
+																		<li>LPH_NO_UPVALUES</li>
+																		<li>LPH_OBFUSCATED*</li>
+																	</ul>
+																	<p>*will be replace with constant 'true'</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary style="color: var(--primary);">DummyFunctionArgs</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Injects random arguments into local functions and their callers.</p>
+																	<p>NOTE: Beta only</p>
+																</div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>EncryptFuncDeclaration</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Turns the declaration of a (global) function into an encrypted string if possible.</p>
+																	<p>Example: 'function foo() end' turns into '_G[strdec(a, b)] = function() end'
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>EncryptStrings</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Encrypts all* the strings</p>
+                                                                    <p>*some strings with special characters might not be included</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary style="color: var(--primary);">FuncChopper</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Splits a local defined function into multiple functions if possible.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>JunkifyAllIfStatements</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Injects opaque conditions into the if statement.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>JunkifyBlockToIf</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Turns do/end blocks into opaque if statements.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>MakeGlobalsLookups</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Turns all the globals explicity into these kind if lookups: _G['foo']</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>MixedBooleanArithmetic</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Mutates literals into mixed boolean arithmerics</p>
+																	<p>Very slow as it falls back on bit/bit32 using bor, bxor, band function calls! Also the MBAs itself are basic pattern matched</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>Minifier</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Rename the local variables to v0, v1, v2, etc...</p>
+																	<p>If you want everything on a single line, make sure to set "MinifyAll:true" in the root node of the config.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>MutateAllLiterals</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Mutates all numeric literals into basic +/- binary nodes.</p>
+																	<p>These are cute as they come with zero performance impact due to the Lua compiler providing constant folding at compile time :3</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>MutateAllLiteralsIntoDeclarations</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>I don't know what I smoked here, but this turns EVERY literal into a local variable.</p>
+																	<p>This will very likely break your script, and also exceeds the 200 local variable limit in no time!</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary style="color: var(--primary);">NnPacked</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Wraps the code into a 'loadstring' call that performs some basic XOR decryption pre loading.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>RevertAllIfStatements</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>This will invert all if statements to create funny looking ones</p>
+																	<p>They tends to give inf loops, especially when control flow obfuscation is applied.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>RewriteToLua51</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Transpiles the current script to something that is compatible with Lua 5.1</p>
+																	<p>The transpiler takes care of 'continue', compounding operators like '+=' and some other fancy things.</p>
+																	<p>NOTE: it is not capable yet of dealing with goto labels!</p>
+																</div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>SwizzleLookups</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Swizzle lookups, will turn foo.bar into foo['bar']. (very nice with string encryption)</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>TableIndirection</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Replaces local variables with a table, each varaible is mapped to a table index.</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+											<details>
+                                                <summary>WriteLuaBit32</summary>
+                                                <ul>
+                                                    <div class="request-container">
+                                                        <div class="codeblock-container">
+                                                            <h4 class="codeblock-header">Description:</h4>
+                                                            <code class="codeblock-multiline">
+                                                                <div class="codeblock-multiline-content">
+                                                                    <p>Addes the 'bit32' in pura Lua for compatibility</p>
+																	<p>Very slow, so only use if needed</p>
+                                                                </div>
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </details>
+                                        </ul>
+										<p>Please note that everything <span style="color: var(--primary);">marked in yellow</span> is exclusive for the Beta testers &amp; <a href="https://discord.gg/vYrmxByrWq">Discord server</a> boosters.</p>
+                                    </div>
                                 </div>
+								
+								<h3 id="extras">Extras</h3>
+								<div class="examples-container">
+									<ul class="ul-list">
+										<details>
+											<summary>Seed</summary>
+											<ul>
+												<div class="request-container">
+													<div class="codeblock-container">
+														<h4 class="codeblock-header">Description:</h4>
+														<code class="codeblock-multiline">
+															<div class="codeblock-multiline-content">
+																<p>(This goes into the root config node)</p>
+																<br/>
+																<p>Provide seed (Int32) to have a determenistic randomness. The seed, along with an identical config and Lua script, can be used to generate the exact same obfuscated output (handy for debugging).</p>
+															</div>
+														</code>
+													</div>
+												</div>
+											</ul>
+										</details>
+										<details>
+											<summary>MinifyAll</summary>
+											<ul>
+												<div class="request-container">
+													<div class="codeblock-container">
+														<h4 class="codeblock-header">Description:</h4>
+														<code class="codeblock-multiline">
+															<div class="codeblock-multiline-content">
+																<p>(This goes into the root config node)</p>
+																<p></p>
+																<p>Set this variable to true to have the code minified. This results in all code on a single line, no comments. (Local variables remain untouched)</p>
+															</div>
+														</code>
+													</div>
+												</div>
+											</ul>
+										</details>
+										<details>
+											<summary>Virtualize</summary>
+											<ul>
+												<div class="request-container">
+													<div class="codeblock-container">
+														<h4 class="codeblock-header">Description:</h4>
+														<code class="codeblock-multiline">
+															<div class="codeblock-multiline-content">
+																<p>(This goes into the root config node)</p>
+																<p></p>
+																<p>Enable this to have the final code virtualized.</p>
+																<p></p>
+																<p>The virtualizer is optimized for Lua 5.1 and may fail on other versions, try to 'RewriteToLua51' beforehand!</p>
+															</div>
+														</code>
+													</div>
+												</div>
+											</ul>
+										</details>
+									</ul>
+								</div>
+								
                             </div>
-                        </div>
+						</div>
                     </div>
                 </div>
             </div>
